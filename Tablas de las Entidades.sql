@@ -6,7 +6,7 @@ create table ARTICULO
 (
    ID_ARTICULO          numeric(8)                     not null,
    ID_COMPRADOR         numeric(8)                     null,
-   ID_SUBASTA           numeric(8)                     null,
+   ID_SUBASTA           int                    null,
    ID_CATEGORIA         numeric(8)                     null,
    NOMBRE_ARTICULO       varchar                   null,
    DESCRIPCION_ARTICULO  varchar                   null,
@@ -34,7 +34,7 @@ create table COMPRADOR
 (
    ID_COMPRADOR         numeric(8)                     not null,
    ID_USUARIO           numeric(8)                     null,
-   ID_SUBASTA           numeric(8)                     null,
+   ID_SUBASTA           int                     null,
    NOMBRE_COMPRADOR     varchar                   null,
    APELLIDO_COMPRADOR   varchar                   null,
    CORREO_COMPRADOR     varchar                   null,
@@ -79,7 +79,7 @@ create table REGISTRO_FORMULARIO
 /*==============================================================*/
 create table SUBASTA 
 (
-   ID_SUBASTA           numeric(8)                     not null,
+   ID_SUBASTA           int                     not null,
    ID_VENDEDOR          numeric(8)                     null,
    NOMBRE_SUBASTA       varchar                   null,
    FECHA_INICIO_SUBASTA timestamp                      null,
